@@ -11,8 +11,8 @@ const Navigation = () => {
           to="/"
           className={({ isActive }) =>
             isActive
-              ? "text-blue-600 font-semibold"
-              : "text-white hover:text-blue-500"
+              ? "text-blue-600 font-semibold transition-colors duration-300"
+              : "text-white hover:text-blue-500 transition-colors duration-300"
           }
         >
           Home
@@ -22,8 +22,8 @@ const Navigation = () => {
             to="/contacts"
             className={({ isActive }) =>
               isActive
-                ? "text-blue-600 font-semibold"
-                : "text-white hover:text-blue-500"
+                ? "text-blue-600 font-semibold transition-colors duration-300"
+                : "text-white hover:text-blue-500 transition-colors duration-300"
             }
           >
             Contacts
