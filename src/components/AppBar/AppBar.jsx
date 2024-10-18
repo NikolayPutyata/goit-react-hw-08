@@ -8,7 +8,7 @@ const AppBar = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   return (
     <>
-      <header>
+      <header className="flex justify-between p-4 bg-gray-800 text-white">
         <Navigation />
         {isLoggedIn ? <UserMenu /> : <AuthNav />}
       </header>

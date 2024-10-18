@@ -6,6 +6,7 @@ import { Route, Routes } from "react-router-dom";
 import RestrictedRoute from "./components/RestrictedRoute/RestrictedRoute";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import { refreshUser } from "./redux/auth/operations";
+import Modal from "react-modal";
 
 const HomePage = lazy(() => import("../src/pages/HomePage/HomePage"));
 const RegisterPage = lazy(() =>
@@ -19,6 +20,7 @@ const App = () => {
   const isRefreshing = useSelector(selectIsRefreshing);
 
   useEffect(() => {
+    Modal.setAppElement("#root");
     dispatch(refreshUser());
   }, [dispatch]);
 

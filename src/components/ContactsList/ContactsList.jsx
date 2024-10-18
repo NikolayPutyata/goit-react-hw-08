@@ -1,14 +1,14 @@
 import { useSelector } from "react-redux";
-import { selectContacts } from "../../redux/contacts/selectors";
+import { selectFilteredContacts } from "../../redux/contacts/selectors";
 import Contact from "../Contact/Contact";
 
 const ContactsList = () => {
-  const contacts = useSelector(selectContacts);
+  const filteredContacts = useSelector(selectFilteredContacts);
 
   return (
     <>
-      <ul>
-        {contacts.map(({ id, name, number }) => (
+      <ul className="space-y-4">
+        {filteredContacts.map(({ id, name, number }) => (
           <Contact key={id} name={name} number={number} id={id} />
         ))}
       </ul>

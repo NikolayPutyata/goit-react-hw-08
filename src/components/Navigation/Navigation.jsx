@@ -6,9 +6,29 @@ const Navigation = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   return (
     <>
-      <nav>
-        <NavLink to="/">Home</NavLink>
-        {isLoggedIn && <NavLink to="/contacts">Contacts</NavLink>}
+      <nav className="max-w-md p-3 border border-gray-300 rounded-lg shadow-lg flex gap-10 items-center justify-between">
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive
+              ? "text-blue-600 font-semibold"
+              : "text-white hover:text-blue-500"
+          }
+        >
+          Home
+        </NavLink>
+        {isLoggedIn && (
+          <NavLink
+            to="/contacts"
+            className={({ isActive }) =>
+              isActive
+                ? "text-blue-600 font-semibold"
+                : "text-white hover:text-blue-500"
+            }
+          >
+            Contacts
+          </NavLink>
+        )}
       </nav>
     </>
   );
