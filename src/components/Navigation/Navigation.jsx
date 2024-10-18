@@ -8,7 +8,7 @@ const Navigation = () => {
     <>
       <nav>
         <NavLink to="/">Home</NavLink>
-        {isLoggedIn && <NavLink to="/contacts">Tasks</NavLink>}
+        {isLoggedIn && <NavLink to="/contacts">Contacts</NavLink>}
       </nav>
     </>
   );
