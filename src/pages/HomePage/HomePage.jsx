@@ -8,6 +8,9 @@ const HomePage = () => {
       <h3 className="text-xl font-normal text-center">
         Registration is required before use. Tailwind was used for styling.
       </h3>
+      <p className="text-sm text-red-500 mt-4 text-center">
+        Your data is not saved or transferred to third parties
+      </p>
     </div>
   );
 };
