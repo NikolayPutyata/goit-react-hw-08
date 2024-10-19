@@ -24,9 +24,7 @@ const App = () => {
     dispatch(refreshUser());
   }, [dispatch]);
 
-  return isRefreshing ? (
-    <b>Refreshing user...</b>
-  ) : (
+  return isRefreshing ? null : (
     <Layout>
       <Routes>
         <Route path="/" element={<HomePage />} />
